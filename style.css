@@ -1,0 +1,207 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('arkaplan.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(255, 127, 42, 0.726);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    animation: fadeIn 1s ease-out;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    animation: slideIn 1s ease;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    opacity: 0;
+    animation: fadeInLabel 0.8s forwards;
+}
+
+label:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+label:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+input[type="number"], input[type="text"], select {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+    border-color: #ff6f61;
+    transform: scale(1.05);
+}
+
+input[type="submit"] {
+    background-color: #ff6f61;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.829);
+}
+
+input[type="submit"]:hover {
+    background-color: #e65c54;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.recommendation {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffe0e0; 
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.recommendation p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.btn {
+    display: grid;
+    place-items: center;
+    background: #e3edf7;
+    padding: 1.4em 4em;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: transform 0.5s;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    animation: fadeInButton 1s forwards;
+    animation-delay: 1s;
+}
+
+.btn:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
+    transform: translateY(0.5em);
+}
+
+.btn svg {
+    transition: transform 0.5s;
+}
+
+.btn:hover svg {
+    transform: scale(0.9);
+    fill: #333333;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLabel {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

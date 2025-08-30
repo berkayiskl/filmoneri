@@ -1,7 +1,7 @@
 # 🎬 Filmoneri – Film Öneri Web Sitesi
 
 Merhaba! Bu proje, film severler için geliştirilmiş basit ama etkili bir **film öneri** web sitesidir.  
-GitHub Pages ile yayınlanmıştır ve tamamen HTML/CSS/JavaScript (veya başka ne kullandıysan) tabanlıdır.
+GitHub Pages ile yayınlanmıştır ve tamamen HTML/CSS/JavaScript tabanlıdır.
 
 ## 🔗 Canlı Site
 
